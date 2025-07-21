@@ -1,0 +1,21 @@
+def queue_websockets(base_websocket, message):
+    connection = websocket_connection.create(base_websocket)
+
+    payloads = [
+        "https://example.com/manage/config/users",
+        "https://example.com/manage/config/budgets",
+        "https://example.com/manage/config/roles",
+        "admin",
+        "123123"
+    ]
+
+    for payload in payloads:
+        connection.queue(message, payload)
+
+
+def handle_outgoing_message(websocket_message):
+    results_table.add(websocket_message)
+
+
+def handle_incoming_message(websocket_message):
+    results_table.add(websocket_message)
