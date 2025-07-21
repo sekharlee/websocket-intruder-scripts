@@ -1,0 +1,6 @@
+How to Use This in Burp
+Go to the WebSocket history tab.
+Highlight the portion of the message to fuzz (e.g., a URL, session ID, CSRF token).
+Right-click → Extensions > WebSocket Turbo Intruder > Send to WebSocket Turbo Intruder.
+The highlighted part is automatically replaced by %s.
+Use the script above — it replaces %s with each payload in the list.
